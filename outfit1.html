@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görsel Çerçevesi</title>
+    <style>
+        /* Section styling */
+        section.row {
+            display: grid; /* Grid düzenini kullanır */
+            grid-template-columns: repeat(2, 1fr); /* İki eşit sütun oluşturur */
+            gap: 10px; /* Görseller arasında boşluk bırakır */
+            width: 100%; /* Sekmenin genişliğini %100 yapar */
+            max-width: 1200px; /* Maksimum genişliği ayarlar */
+            margin: 0 auto; /* Sayfanın ortasında hizalar */
+            padding: 10px; /* İç boşluk bırakır */
+            box-sizing: border-box; /* Padding ve border genişliği de içerik genişliğine dahil eder */
+        }
+
+        /* Görsellerin stilini belirler */
+        .course-col {
+            position: relative; /* Çerçeve konumlandırmasını sağlar */
+            border: 5px solid #333; /* Çerçeve kalınlığı ve rengi */
+            border-radius: 10px; /* Köşeleri yuvarlatır */
+            overflow: hidden; /* Görsel dışındaki kısmı gizler */
+        }
+
+        .course-col img {
+            width: 100%; /* Görsellerin konteyneri kadar genişlikte olmasını sağlar */
+            height: auto; /* Yüksekliğin oranını korur */
+            display: block; /* Görseli blok eleman olarak görüntüler */
+        }
+    </style>
+</head>
+<body>
+    <section class="row">
+        <div class="course-col">
+            <a href="https://www.longchamp.com/fr/fr/products/sac-a-main-m-L1623089P68.html">
+                <img src="https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dw0e384a77/images/DIS/L1623089P68_0.png?sw=500&sh=500&sm=fit" alt="Product 1">
+            </a>
+        </div>
+        <div class="course-col">
+            <a href="https://www.zara.com/tr/tr/keten-karisimli-cizgili-t-shirt-p08066529.html?v1=384679339">
+                <img src="https://static.zara.net/assets/public/48cb/583f/fca04733b183/2355b2cdaf19/08066529044-e1/08066529044-e1.jpg?ts=1717056650270&w=750" alt="Product 2">
+            </a>
+        </div>
+        <div class="course-col">
+            <a href="https://www.zara.com/tr/tr/z1975-straight-fit-yuksek-bel-denim-jean-p06164166.html?v1=371877477">
+                <img src="https://static.zara.net/assets/public/6fc3/6385/18094241bf24/5f0f86ed705c/06164166800-e1/06164166800-e1.jpg?ts=1724341375317&w=750" alt="Product 3">
+            </a>
+        </div>
+        <div class="course-col">
+            <a href="https://www.zara.com/tr/tr/100-kasmir-kazak-p00837550.html?v1=364107707">
+                <img src="https://static.zara.net/assets/public/e6be/1dad/681141aba327/03ab21bb2ad3/00837550803-e1/00837550803-e1.jpg?ts=1722433953835&w=750" alt="Product 4">
+            </a>
+        </div>
+    </section>
+</body>
+</html>

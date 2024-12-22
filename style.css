@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+}
+
+.navbar {
+    display: flex; /* Make navbar a flex container */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space between items */
+    padding: 10px 20px; /* Add padding around navbar */
+    background-color: #d4d9a0;
+}
+
+.logo img {
+    width: 10px;
+    height: auto;
+}
+
+.main-menu {
+    display: flex; /* Yatay hizalama için flex kullanımı */
+    list-style: none; /* Noktaları kaldır */
+    background-color: #d4d9a0;
+    padding: 10px 20px;
+}
+
+.main-menu li {
+    position: relative; /* Alt menülerin konumunu ayarlamak için gerekli */
+    margin: 0 20px; /* Ana menü öğeleri arası boşluk */
+}
+
+/* Alt menü stil ayarları */
+.submenu {
+    position: absolute; /* Alt menünün ana menünün altında görünmesini sağlar */
+    left: 0;
+    top: 100%; /* Ana menünün hemen altında başlar */
+    width: 200px; /* Alt menü genişliği */
+    background-color: #d4d9a0; /* Arka plan rengi */
+    display: none; /* Başlangıçta alt menüyü gizler */
+    list-style: none; /* Noktaları kaldır */
+    z-index: 10; /* Diğer öğelerin üstünde görünmesi için */
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.main-menu li:hover .submenu {
+    display: block; /* Hover sırasında alt menüyü göster */
+}
+
+/* Genel link stil ayarları */
+.main-menu a {
+    color: #9b9494; /* Link rengi */
+    padding: 10px;
+    display: block; /* Linkleri blok öğe yap */
+    transition: background 0.3s;
+}
+
+.main-menu a:hover {
+    background-color: #aac8ab; /* Hover efekti */
+    color: #ffffff; /* Hover sırasında yazı rengi */
+}
+
+.right-menu {
+    display: flex; /* Display as flex for horizontal alignment */
+    list-style: none;
+    margin-left: auto; /* Pushes this list to the far right */
+}
+
+.right-menu li {
+    margin: 0 14px; /* Space between right menu items */
+}
+.circle {
+    width: 100%;
+    text-align: center;
+    padding: 30px 30px;
+}
+
+.circle img {
+    width: 40px; /* Width of the image */
+    height: 40px; /* Ensure the image is square */
+    margin: 10px 30px;
+}
+
+/* General styling for all links */
+.navbar ul li a {
+    color: #000000; 
+    font-size: 18px;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+/* Hover and active states for links */
+.navbar ul li a:hover,
+.navbar ul li a:active {
+    color: rgb(255, 255, 255); 
+}
+
+/* Swiper styling */
+.swiper {
+    width: 80%; /* Full width of the parent container */
+    height: 80%; /* Full height of the parent container */
+    position: relative; /* Position relative for absolute positioning of controls */
+}
+
+.swiper-container {
+    width: 100%; /* Full width of the swiper container */
+    height: 100%; /* Full height of the swiper container */
+    text-align: center; /* Center align text if needed */
+    overflow: hidden; /* Prevent overflow of swiper content */
+}
+
+.swiper-wrapper {
+    display: flex; /* Aligns swiper slides in a row */
+    align-items: center; /* Centers swiper slides vertically */
+}
+
+.swiper-slide {
+    display: flex; /* Flex display to center content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    width: 100%; /* Full width of each slide */
+    height: 100%; /* Full height of each slide */
+}
+
+.swiper-slide img {
+    max-width: 100%; /* Ensures images fit within their container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures images do not leave space below */
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom */
+    left: 0;
+    right: 0;
+    text-align: center; /* Center align pagination dots */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #6b0505f1 !important; /* Color for navigation buttons */
+}
+
+
+/* Clothes section styling */
+.clothes {
+    text-align: center;
+    margin-top: 3%;
+    color: #6b0505f1;
+}
+
+.row {
+    display: flex; /* Aligns the images in a row */
+    justify-content: space-between; /* Distributes space evenly between images */
+    align-items: center; /* Centers images vertically within the row */
+    margin-top: 3%;
+    padding: 0 20px; /* Adds equal padding on the left and right sides */
+    gap: 2px; /* Sets equal gap between images */
+}
+
+/* Each clothes item container */
+.clothesrow {
+    display: flex; /* Makes the container a flex item */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    background: #d4d9a098; /* Semi-transparent background */
+    padding: 10px; /* Adds space inside the background */
+    box-sizing: border-box; /* Includes padding in the total width calculation */
+    margin: 10px; /* Adds margin around each container */
+    text-align: center; /* Centers the text or image content */
+    flex-basis: 31%; /* Ensures each item takes up roughly a third of the row */
+    position: relative; /* Allows positioning of the overlay */
+    overflow: hidden; /* Ensures the overlay does not overflow the container */
+}
+
+/* Styling for images within the clothes row */
+.clothesrow img {
+    max-width: 100%; /* Ensures the image fits within its container */
+    height: auto; /* Maintains aspect ratio */
+    margin-top: 0; /* Adjust if needed for spacing */
+    display: block; /* Ensures images are displayed as block elements */
+}
+
+/* Overlay styling */
+.image-container {
+    position: relative; /* Allows absolute positioning of the overlay */
+    overflow: hidden; /* Hides any overflow of the overlay */
+}
+
+.overlay {
+    background: #610000; /* Background color of the overlay */
+    color: white; /* Text color */
+    height: 100%; /* Covers the full height of the container */
+    width: 100%; /* Covers the full width of the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex; /* Centers content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s, background 0.5s; /* Smooth transition */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color: #610000;
+
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.clothesrow {
+    flex-basis: 31%;
+    position: relative; /* Allows absolute positioning of the overlay */
+    margin-bottom: 5%;
+}
+
+.image-container {
+    position: relative; /* Allows absolute positioning of the overlay */
+    overflow: hidden; 
+    display: inline-block;/* Hides any overflow of the overlay */
+}
+
+.image-container img {
+    width: 100%; /* Ensures image fits the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes space below the image */
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+/* Styling for overlay with "DETAILS OF OUTFIT" text */
+.overlay1 {
+    background: #610000; /* Background color of the overlay */
+    color: white; /* Text color */
+    height: 100%; /* Covers the full height of the container */
+    width: 100%; /* Covers the full width of the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex; /* Centers content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s, background 0.5s; /* Smooth transition */
+    font-size: 18px; /* Adjust font size as needed */
+    text-align: center; /* Center-aligns text */
+}
+.image-container:hover .overlay1 {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.product_section {
+    width: 50%;
+    float: left;
+}
+
+.product_taital {
+    width: 50%;
+    float: left;
+    font-size: 40px;
+    color: #118e95;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0;
+}
+
+.product_section2 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.cproduct_img img {
+    margin-top: 16px;
+    width: 25%; /* Make image responsive */
+    height: auto;
+}
+
+.types_text {
+    font-size: 22px;
+    color: #3b3b3b;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.looking_text {
+    font-size: 16px;
+    color: #3b3b3b;
+    text-align: center;
+    margin: 0;
+}
+
+.read_bt {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.read_bt a {
+    font-size: 13px;
+    color: #232221;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #232221;
+    text-transform: uppercase;
+    padding: 8px;
+    display: inline-block; /* Ensure link looks like a button */
+}
+
+.read_bt a:hover {
+    color: #3b3b3b;
+    border: 1px solid #3b3b3b;
+}
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-wrapper {
+    display: flex; /* Display all items in a row */
+    flex-direction: row; /* Align products horizontally */
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    flex: 0 0 auto; /* Each item should not shrink or grow */
+    box-sizing: border-box;
+    width: 200px; /* Smaller size for each product */
+    margin: auto; /* Spacing between products */
+    text-align: center;
+}
+
+.slider-item img {
+    width: 100%; /* Make image width smaller */
+    height: auto;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}

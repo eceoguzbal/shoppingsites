@@ -1,0 +1,25 @@
+/* Section styling */
+section.row {
+    display: grid; /* Grid düzenini kullanır */
+    grid-template-columns: repeat(2, 1fr); /* İki eşit sütun oluşturur */
+    gap: 10px; /* Görseller arasında boşluk bırakır */
+    width: 100%; /* Sekmenin genişliğini %100 yapar */
+    max-width: 1200px; /* Maksimum genişliği ayarlar */
+    margin: 0 auto; /* Sayfanın ortasında hizalar */
+    padding: 10px; /* İç boşluk bırakır */
+    box-sizing: border-box; /* Padding ve border genişliği de içerik genişliğine dahil eder */
+}
+
+/* Görsellerin stilini belirler */
+.course-col {
+    position: relative; /* Çerçeve konumlandırmasını sağlar */
+    border: 5px solid #333; /* Çerçeve kalınlığı ve rengi */
+    border-radius: 10px; /* Köşeleri yuvarlatır */
+    overflow: hidden; /* Görsel dışındaki kısmı gizler */
+}
+
+.course-col img {
+    width: 100%; /* Görsellerin konteyneri kadar genişlikte olmasını sağlar */
+    height: auto; /* Yüksekliğin oranını korur */
+    display: block; /* Görseli blok eleman olarak görüntüler */
+}

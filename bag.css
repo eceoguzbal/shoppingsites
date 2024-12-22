@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+body {
+    background-color: #eee;
+    font-family: 'Calibri', sans-serif !important;
+}
+.container-fluid {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Minimum height to fill the viewport */
+    background-color: #eee; /* Match the body background color */
+    margin-top: 0; /* Remove any extra top margin */
+}
+
+
+
+.card {
+    margin-bottom: 100px;
+    border: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    letter-spacing: .5px;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 5px 24px 0 rgba(255, 0, 136, 0.956);
+    box-shadow: 1px 5px 24px 0 rgb(241, 42, 155);
+    align-items: center;
+}
+
+.card .card-header {
+    background-color: #fff;
+    border-bottom: none;
+    padding: 24px;
+    border-bottom: 1px solid #f6f7fb;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.card img {
+    align-items: center;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+
+
+.card .card-body {
+    padding: 30px;
+    align-items: center;
+    background-color: transparent;
+}
+
+
+.btn-primary, .btn-primary.disabled, .btn-primary:disabled {
+    background-color: #eee!important;
+    border-color: #dd2fb1!important;
+}
